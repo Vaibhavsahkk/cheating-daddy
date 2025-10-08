@@ -1,0 +1,60 @@
+.advanced-view {
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color, #e5e5e7);
+}
+
+.advanced-view h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.advanced-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--button-background, rgba(0, 0, 0, 0.5));
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  border-radius: 8px;
+}
+
+.advanced-section h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color, #e5e5e7);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 8px 0;
+}
+
+.setting-item:last-child {
+  margin-bottom: 0;
+}
+
+.setting-item label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.select-input {
+  padding: 6px 10px;
+  background: var(--input-background, rgba(0, 0, 0, 0.3));
+  color: var(--text-color, #e5e5e7);
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  min-width: 120px;
+}
+
+.setting-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--focus-border-color, #007aff);
+}

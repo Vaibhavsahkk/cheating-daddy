@@ -1,0 +1,141 @@
+.main-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.welcome {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  margin-top: auto;
+  cursor: default;
+  user-select: none;
+  color: var(--text-color, #e5e5e7);
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+input {
+  background: var(--input-background, rgba(0, 0, 0, 0.3));
+  color: var(--text-color, #e5e5e7);
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--focus-border-color, #007aff);
+  box-shadow: 0 0 0 3px var(--focus-box-shadow, rgba(0, 122, 255, 0.2));
+  background: var(--input-focus-background, rgba(0, 0, 0, 0.5));
+}
+
+input::placeholder {
+  color: var(--placeholder-color, rgba(255, 255, 255, 0.4));
+}
+
+/* Red blink animation for empty API key */
+input.api-key-error {
+  animation: blink-red 1s ease-in-out;
+  border-color: #ff4444;
+}
+
+@keyframes blink-red {
+  0%, 100% {
+    border-color: var(--button-border, rgba(255, 255, 255, 0.1));
+    background: var(--input-background, rgba(0, 0, 0, 0.3));
+  }
+  25%, 75% {
+    border-color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+  }
+  50% {
+    border-color: #ff6666;
+    background: rgba(255, 68, 68, 0.15);
+  }
+}
+
+.start-button {
+  background: var(--start-button-background, white);
+  color: var(--start-button-color, black);
+  border: 1px solid var(--start-button-border, white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.start-button:hover {
+  background: var(--start-button-hover-background, rgba(255, 255, 255, 0.8));
+  border-color: var(--start-button-hover-border, rgba(0, 0, 0, 0.2));
+}
+
+.start-button.initializing {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.start-button.initializing:hover {
+  background: var(--start-button-background, white);
+  border-color: var(--start-button-border, white);
+}
+
+.shortcut-icons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 4px;
+}
+
+.shortcut-icons svg {
+  width: 14px;
+  height: 14px;
+}
+
+.shortcut-icons svg path {
+  stroke: currentColor;
+}
+
+.description {
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  cursor: default;
+  user-select: none;
+}
+
+.link {
+  color: var(--link-color, #007aff);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.shortcut-hint {
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+  font-size: 11px;
+  opacity: 0.8;
+}

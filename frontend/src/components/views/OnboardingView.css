@@ -1,0 +1,95 @@
+.onboarding-view {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 30, 0.9) 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.onboarding-container {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.step-dot.active {
+  background: var(--focus-border-color, #007aff);
+}
+
+.step-content {
+  margin-bottom: 40px;
+}
+
+.step-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.step-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-color, #e5e5e7);
+  margin-bottom: 16px;
+}
+
+.step-description {
+  font-size: 16px;
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+  line-height: 1.5;
+  margin: 0;
+}
+
+.step-controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--focus-border-color, #007aff);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--text-input-button-hover, #0056b3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-color, #e5e5e7);
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+}
+
+.btn-secondary:hover {
+  background: var(--hover-background, rgba(255, 255, 255, 0.1));
+}

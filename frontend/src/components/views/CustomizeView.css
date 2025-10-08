@@ -1,0 +1,115 @@
+.customize-view {
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color, #e5e5e7);
+}
+
+.customize-view h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.setting-section {
+  margin-bottom: 30px;
+}
+
+.setting-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color, #e5e5e7);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.option-card {
+  padding: 16px;
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  border-radius: 8px;
+  background: var(--button-background, rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  background: var(--hover-background, rgba(255, 255, 255, 0.1));
+}
+
+.option-card.selected {
+  border-color: var(--focus-border-color, #007aff);
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.option-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.option-description {
+  font-size: 12px;
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+}
+
+.select-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  background: var(--input-background, rgba(0, 0, 0, 0.3));
+  color: var(--text-color, #e5e5e7);
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.select-input:focus {
+  outline: none;
+  border-color: var(--focus-border-color, #007aff);
+  box-shadow: 0 0 0 3px var(--focus-box-shadow, rgba(0, 122, 255, 0.2));
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-label input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-slider {
+  width: 44px;
+  height: 24px;
+  background: var(--button-border, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-label input[type="checkbox"]:checked + .toggle-slider {
+  background: var(--focus-border-color, #007aff);
+}
+
+.toggle-label input[type="checkbox"]:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}

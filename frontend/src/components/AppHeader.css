@@ -1,0 +1,89 @@
+.header {
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  padding: var(--header-padding, 10px 20px);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+  background: var(--header-background, rgba(0, 0, 0, 0.8));
+  border-radius: var(--border-radius, 7px);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header-title {
+  flex: 1;
+  font-size: var(--header-font-size, 16px);
+  font-weight: 600;
+  -webkit-app-region: drag;
+  cursor: default;
+  user-select: none;
+  color: var(--text-color, #e5e5e7);
+}
+
+.header-actions {
+  display: flex;
+  gap: var(--header-gap, 12px);
+  align-items: center;
+  -webkit-app-region: no-drag;
+}
+
+.header-actions span {
+  font-size: var(--header-font-size-small, 14px);
+  color: var(--header-actions-color, rgba(255, 255, 255, 0.6));
+  cursor: default;
+  user-select: none;
+}
+
+.button {
+  background: var(--button-background, rgba(0, 0, 0, 0.5));
+  color: var(--text-color, #e5e5e7);
+  border: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+  padding: var(--header-button-padding, 8px 16px);
+  border-radius: 8px;
+  font-size: var(--header-font-size-small, 14px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: inherit;
+}
+
+.icon-button {
+  background: none;
+  color: var(--icon-button-color, rgb(229, 229, 231));
+  border: none;
+  padding: var(--header-icon-padding, 8px);
+  border-radius: 8px;
+  font-size: var(--header-font-size-small, 14px);
+  font-weight: 500;
+  display: flex;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.icon-button svg {
+  width: var(--icon-size, 16px);
+  height: var(--icon-size, 16px);
+}
+
+.icon-button:hover {
+  background: var(--hover-background, rgba(255, 255, 255, 0.1));
+  opacity: 1;
+}
+
+.button:hover {
+  background: var(--hover-background, rgba(255, 255, 255, 0.1));
+}
+
+.header.click-through .button:hover,
+.header.click-through .icon-button:hover {
+  background: transparent;
+}
+
+.key {
+  background: var(--key-background, rgba(255, 255, 255, 0.1));
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 0px;
+}

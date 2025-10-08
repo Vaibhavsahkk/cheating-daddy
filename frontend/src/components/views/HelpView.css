@@ -1,0 +1,85 @@
+.help-view {
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color, #e5e5e7);
+}
+
+.help-view h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.help-section {
+  margin-bottom: 30px;
+}
+
+.help-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color, #e5e5e7);
+}
+
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--button-border, rgba(255, 255, 255, 0.1));
+}
+
+.shortcut-key {
+  font-family: 'Monaco', 'Menlo', monospace;
+  background: var(--key-background, rgba(255, 255, 255, 0.1));
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.shortcut-description {
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+  font-size: 14px;
+}
+
+.instructions-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+}
+
+.instructions-list li {
+  counter-increment: step-counter;
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.instructions-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--focus-border-color, #007aff);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.help-section p {
+  line-height: 1.6;
+  color: var(--description-color, rgba(255, 255, 255, 0.6));
+}

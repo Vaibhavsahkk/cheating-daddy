@@ -93,3 +93,13 @@ typings/
 out/
 .specstory
 .specstory/
+
+# React build output
+frontend/build/
+
+# Assignment files (temporary)
+LOOM_VIDEO_SCRIPT.md
+TECHNICAL_SUMMARY.md
+DEMO_SCRIPT.md
+CLEANUP_GUIDE.md
+AGENTS.md
